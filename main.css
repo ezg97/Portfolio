@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV BAR */
+[role="navigation"]{
+    border: 1px solid grey;
+    background: black;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index:1;
+
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+[role="navigation"] ul{
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+ul li{
+    margin-left: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+/* MAIN */
+[role='main']{
+    position: relative;
+    padding-top: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* HEADER */
+header h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* IMAGES */
+img.images{
+    width: 100%;
+    padding: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* sections */
+section{
+    max-width:800px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 80px
+}
+
+section h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px
+}
+
+section .quiz-app{
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+section img{
+    padding: 30px; 
+}
+
+/* Text */
+section p{
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+/* LINKS */
+
+.quiz-app a, [role='content-info'] a{
+    color: black;
+    text-decoration: inherit;
+}
+
+.quiz-app a:hover, .quiz-app a:focus,
+[role='content-info'] a:hover, [role='content-info'] a:focus{
+    text-decoration: underline;
+}
+
+/* footer */
+[role='content-info']{
+    text-align: center;
+}
