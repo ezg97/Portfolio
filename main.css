@@ -26,18 +26,7 @@
 
 }
 
-[role="navigation"] ul{
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-}
 
-ul li{
-    margin-left: 20px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
 
 
 /* MAIN */
@@ -115,4 +104,21 @@ section p{
 /* footer */
 [role='content-info']{
     text-align: center;
+}
+
+/* computer screen */
+@media screen and (min-width: 768px) {
+    [role="navigation"] ul{
+        list-style: none;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    ul li{
+        margin-left: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
 }
