@@ -3,18 +3,21 @@
 <head>
     <title>HTML wireframe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <nav role="navigation">
         <h2>Elijah Guerrero</h2>
-        <ul>
-            <li>Bio</li>
-            <li>Projects</li>
-            <li>Experience</li>
-            <li>Git</li>
-        </ul>
+        <div class="dropdown">
+            <button class="btn-drop" onclick="btnDropClick()" type="button">&#9776;</button>
+            <ul class="content-drop hide">
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="https://github.com/ezg97"  target="_blank">Git</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main role="main">
@@ -22,14 +25,14 @@
             <h1>Fullstack Developer</h1>
         </header>
 
-        <section class="bio">
+        <section id="bio">
             <p>Hello, I’m Elijah and I’m a fullstack developer.
                  Programming is my career and web development is my passion. I’ve learned that the reward and enjoyment received from Web Dev greatly exceeds what can be obtained from other
                  languages.
                  I enjoy making my dreams or ideas come to life through code.</p>
         </section>
 
-        <section>
+        <section id="projects">
             <h2>My Projects</h2>
             <div class="quiz-app">
                 <h3>Quiz App: <a href="https://ezg97.github.io/quiz-app/" target="_blank">Page</a> | <a href="https://github.com/ezg97/quiz-app" target="_blank">Git</a></h3>
@@ -38,7 +41,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="experience">
             <h2>Experience</h2>
             <p><span>I have spent time programing in static, dynamic, object oriented, and even functional (Ocaml) programming languages.</span>
                 <span>I have experience in C++, Python, Javascript, HTML, CSS, and I’m self taught in Java and XML.</span> <span>I’ve developed applications
@@ -47,5 +50,7 @@
 
     </main>
     <footer role="content-info">Contact me at: <a href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio">elijahguerrero97@gmail.com</a></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
