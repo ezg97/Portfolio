@@ -54,6 +54,7 @@
 }
 .content-drop li a{
     text-decoration: inherit;
+    color: white;
 }
 .content-drop li a:visited{
     color: white;
