@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="main.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet"></head>
 <body>
     <nav role="navigation">
         <h2>Elijah Guerrero</h2>
@@ -33,10 +33,21 @@
             <div class='email' id='email'>
                 <h3>From: Guerrero, Elijah</h3>
                 <h3>To: Future Employers</h3>
-                <p class='email-body'><span>Hello,<br><br> I’m Elijah and I’m a fullstack developer.<br>
-                    Programming is my <b>career</b> and web development is my <b>passion</b>. <br>I’ve learned that the reward and enjoyment received from Web Dev greatly exceeds what can be obtained from other
-                    languages.
-                    I enjoy making my dreams or ideas come to life through code.<br><br>Best Regards,<br>Elijah</span></p>
+                <div class='email-body'>
+                    <p><span class='email-text'>Hello,<br><br> I’m Elijah and I’m a fullstack developer.<br></span></p>
+
+                    <ul class="email-list">
+                        <li><span class='email-text'>Programming is my <b>career</b>,<br></span></li>
+                        <li><span class='email-text'>Web development is my <b>passion</b>,<br></span></li>
+                        <li><span class='email-text'>and I enjoy making my <b>ideas</b> come to life through code.<br></span></li>
+                    </ul>
+
+                    <p><span class='email-text'>Best Regards,<br>Elijah</span></p>
+                </div>
+            </div>
+            <div class='email-buttons'>
+                <a class="reply" href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio&body=Hello Elijah,">Reply</a>
+                <a class="forward" href="mailto:Enter an email?subject=Check out this portfolio&body=Hello, here's the link: https://ezg97.github.io/Portfolio/.">Forward</a>
             </div>
         </section>
 
@@ -51,17 +62,17 @@
 
         <section id="experience">
             <h2>Experience</h2>
-            <ul>
-                <li>I have spent time programing in static, dynamic, object oriented, and even functional (Ocaml) programming languages.</li>
+            <ul class="experience-list">
+                <li>Spent time programing in static, dynamic, object oriented, and even functional (Ocaml) programming languages.</li>
                 <br><br>
-                <li>I have experience in C++, Python, Javascript, HTML, CSS, and I’m self taught in Java and XML.</li>
+                <li>Experience in C++, Python, Javascript, HTML, CSS, and I’m self taught in Java and XML.</li>
                 <br>
-                <li>I’ve developed applications for the web and for mobile devices using Android Studio.</li>
+                <li>Developed applications for the web and for mobile devices using Android Studio.</li>
             </ul>
         </section>
 
     </main>
-    <footer role="content-info">Contact me at: <a href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio">elijahguerrero97@gmail.com</a></footer>
+    <footer role="content-info"><a href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio">Contact me at: elijahguerrero97@gmail.com</a></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>

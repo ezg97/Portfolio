@@ -5,7 +5,9 @@
     padding: 0;
 }
 
-/* NAV BAR */
+/* ---------------------- 
+        NAV BAR 
+----------------------*/
 [role="navigation"]{
     border: 1px solid grey;
     background: black;
@@ -19,15 +21,16 @@
     z-index:1;
 
     width: 100%;
-    padding-left: 5px;
+    padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .btn-drop{
-    background-color: black;
-    color: white;
+    background-color: grey;
+    color: black;
     font-weight: bold;
     font-size: 24px;
     padding: 0;
@@ -39,18 +42,22 @@
 }
 
 .btn-drop:focus,.btn-drop:hover{
-    background:grey;
-    color: black;
-    outline: black;
+    background:darkgreen;
+    color: white;
+    outline: white;
 }
 .content-drop{
     list-style: none;
     position: absolute;
-    right: 20px;
-    background-color: rgba(0,0,0,0.7);
+    right: -1px;
+    background-color: black;
     color: white;
     border: 1px solid grey;
+    border-top: none;
+    border-right: 1px solid black;
     padding: 5px;
+    margin-top: 20px;
+    text-align: left;
 }
 .content-drop li a{
     text-decoration: inherit;
@@ -60,14 +67,9 @@
     color: white;
 }
 
-/* "links" section for other styling */
-
-/* Hide */
-.hide{
-    display: none;
-}
-
-/* ---------------------- MAIN ----------------------*/
+/* ---------------------- 
+        MAIN 
+----------------------*/
 [role='main']{
     position: relative;
     padding-top: 60px;
@@ -75,20 +77,25 @@
     padding-right: 10%;
 }
 
-/* HEADER */
+/* ---------------------- 
+        HEADER 
+----------------------*/
 header h1{
     width: 100%;
     text-align: center;
     margin-top: 60px;
-    margin-bottom: -10px;
+    margin-bottom: 80px;
+    font-family: 'Montserrat', sans-serif;
 }
-/* EMAIL LOGO */
-.logo-border{
-    width: 40px;
-    height: 40px;
-    float: left;
-    margin-left: -50px;
 
+/* ---------------------- 
+        EMAIL LOGO 
+----------------------*/
+
+.logo-border{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
 }
 .logo{
     border: 1px solid grey;
@@ -101,11 +108,13 @@ header h1{
     margin: 0%;
 }
 .logo:hover, .logo:focus{
-    border: 1px solid white;
+    border: 1px solid darkgreen;
     
 }
 
-/* EMAIL BODY */
+/* ---------------------- 
+        EMAIL BODY 
+----------------------*/
 .email{
     border: 3px solid rgb(194, 194, 69);
     border-radius: 10px;
@@ -113,6 +122,10 @@ header h1{
     background: lightyellow;
 
     padding: 10px;
+    margin-bottom: 10px;
+
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .email h3{
@@ -126,24 +139,55 @@ header h1{
 
     text-align: left;
 }
-.email-body span{
+.email-body span.email-text{
     font-size: 18px;
     font-weight: 510;
     color: grey;
     line-height: 1.6;
 }
 
-/* IMAGES */
-img.images{
-    width: 100%;
-    padding: 0px;
+.email-body ul.email-list li{
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    list-style-type: none;
+    text-align: left;
+}
+/* two breaks was too much space between the list and the text above and below. 
+One break was not enough space. So, I had to do one break then 5 pixels.*/
+.email-body ul{
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+/* ---------------------- 
+        EMAIL REPLY/FORWARD 
+----------------------*/
+.reply, .forward{
+    text-decoration: inherit;
+    border-radius:5px;
+    border: 1px solid grey;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
-/* sections */
+/* ---------------------- 
+        SECTIONS 
+----------------------*/
+
 /* so that the header doesn't get in front of the title*/
 section:target::before {
     content: '';
@@ -159,7 +203,8 @@ section{
 
     margin-left:auto;
     margin-right: auto;
-    margin-top: 80px
+    margin-bottom: 120px;  
+    font-family: 'Montserrat', sans-serif;  
 }
 
 section h2{
@@ -179,14 +224,39 @@ section img{
     padding: 30px; 
 }
 
-/* Text */
-section ul li{
+/* ---------------------- 
+        PROJECT IMAGE(s) 
+----------------------*/
+img.images{
+    width: 100%;
+    padding: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ---------------------- 
+        TEXT 
+----------------------*/
+.quiz-app h3{
+    font-size: 18px;
+    font-weight: 510;
+}
+.quiz-app h3 a{
+    font-weight: bold;
+}
+.quiz-app p{
+    font-size: 18px;
+    font-weight: 510;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+}
+section ul.experience-list li{
     background-color: rgba(0, 0, 0, 0.01);
     padding: 10px;
     border-radius: 10px;
     list-style-type: none;
-    font-size: 20px;
-    font-weight: bold;
     width: 100%;
     text-align: left;
 
@@ -196,8 +266,9 @@ section ul li{
     line-height: 1.6;
 }
 
-/* LINKS */
-
+/* ---------------------- 
+        LINKS 
+----------------------*/
 .quiz-app a, [role='content-info'] a{
     color: black;
     text-decoration: inherit;
@@ -205,12 +276,16 @@ section ul li{
 
 .quiz-app a:hover, .quiz-app a:focus, 
 [role='content-info'] a:hover, [role='content-info'] a:focus,
-.content-drop li a:hover, .content-drop li a:focus{
+.content-drop li a:hover, .content-drop li a:focus,
+.reply:hover, .reply:focus,
+.forward:hover, .forward:focus{
     text-decoration: underline;
-    color: darkgrey;
+    color: darkgreen;
 }
 
-/* -------- footer ------------- */
+/* ---------------------- 
+        FOOTER 
+----------------------*/
 [role="content-info"]{
     margin-top:150px;
 
@@ -219,12 +294,23 @@ section ul li{
     text-align: center;
 
     padding: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
-/* computer screen */
+
+/*---------------- RESPONSIVE LAYOUT ----------------*/
+
+
+/* ---------------------- 
+        COMPUTER SCREEN REGULAR 
+----------------------*/
 @media screen and (min-width: 768px) {
         
+    h2{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
     [role="navigation"] .dropdown .content-drop{
         position: static;
         list-style: none;
@@ -233,6 +319,8 @@ section ul li{
 
         border:1px solid black;
         background-color: black;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     .btn-drop{
         display: none;
@@ -243,28 +331,54 @@ section ul li{
         font-weight: bold;
         display: flex;
         align-items: center;
+
+    }
+    .logo-border{
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-left: -50px;
+    
     }
     section{
-        margin-top: 100px;
+        margin-bottom: 200px;
     }
     [role='content-info']{
-        margin-top:150px;
+        margin-top:-50px;
     }  
     header h1{
-        margin-bottom: -20px;
+        margin-bottom: 100px;
     } 
 }
 
-/* computer screen */
+/* ---------------------- 
+        COMPUTER SCREEN LARGE 
+----------------------*/
 @media screen and (min-width: 1024px) {
+    h2{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .logo-border{
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-left: -50px;
+    }
     section{
-        margin-top: 150px;
+        margin-bottom: 150px;
     }
     [role='content-info']{
         margin-top:200px;
     }  
     header h1{
-        margin-top: 100px;
-        margin-bottom: -120px;
+        margin-bottom: 100px;
     } 
+}
+
+/* --------- 
+JAVASCRIPT
+--------- */
+.hide{
+    display: none;
 }
