@@ -29,8 +29,8 @@
 
 }
 .btn-drop{
-    background-color: grey;
-    color: black;
+    background-color: darkgreen;
+    color: white;
     font-weight: bold;
     font-size: 24px;
     padding: 0;
@@ -43,8 +43,8 @@
 
 .btn-drop:focus,.btn-drop:hover{
     background:darkgreen;
-    color: white;
-    outline: white;
+    color: black;
+    outline: black;
 }
 .content-drop{
     list-style: none;
@@ -58,6 +58,7 @@
     padding: 5px;
     margin-top: 20px;
     text-align: left;
+    font-size: 20px;
 }
 .content-drop li a{
     text-decoration: inherit;
@@ -180,7 +181,7 @@ One break was not enough space. So, I had to do one break then 5 pixels.*/
     background-color: white;
     color: black;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 
 
@@ -322,6 +323,9 @@ section ul.experience-list li{
         margin-top: auto;
         margin-bottom: auto;
     }
+    .content-drop li a{
+        font-size: 20px;
+    }
     .btn-drop{
         display: none;
     }
@@ -355,9 +359,10 @@ section ul.experience-list li{
         COMPUTER SCREEN LARGE 
 ----------------------*/
 @media screen and (min-width: 1024px) {
-    h2{
+    [role="navigation"] h2{
         margin-top: auto;
         margin-bottom: auto;
+        font-size: 40px;
     }
     .logo-border{
         width: 40px;
@@ -365,8 +370,30 @@ section ul.experience-list li{
         float: left;
         margin-left: -50px;
     }
+    header h1{
+        margin-top: 100px;
+    }
+    
+    .email h3{
+        font-size: 20px;
+    }
+    .email-body span.email-text{
+        font-size: 22px;
+    }
+    .content-drop li a{
+        font-size: 24px;
+    }
     section{
         margin-bottom: 150px;
+    }
+    .quiz-app h3{
+        font-size: 22px;
+    }
+    .quiz-app p{
+        font-size: 22px;
+    }
+    section ul.experience-list li{
+        font-size: 22px;
     }
     [role='content-info']{
         margin-top:200px;
