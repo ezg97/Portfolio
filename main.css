@@ -8,7 +8,7 @@
 /* ---------------------- 
         NAV BAR 
 ----------------------*/
-[role="navigation"]{
+.navigation { 
     border: 1px solid grey;
     background: black;
     color: white;
@@ -60,18 +60,23 @@
     text-align: left;
     font-size: 20px;
 }
-.content-drop li a{
+.content-drop li a, h2 a{
     text-decoration: inherit;
     color: white;
 }
-.content-drop li a:visited{
+.content-drop li a:visited, h2 a:visited{
     color: white;
+}
+
+h2 a:hover,  h2 a:focus {
+    color: green;
+    text-decoration: underline;
 }
 
 /* ---------------------- 
         MAIN 
 ----------------------*/
-[role='main']{
+.main {
     position: relative;
     padding-top: 60px;
     padding-left: 10%;
@@ -116,6 +121,7 @@ header h1{
 /* ---------------------- 
         EMAIL BODY 
 ----------------------*/
+
 .email{
     border: 3px solid rgb(194, 194, 69);
     border-radius: 10px;
@@ -131,12 +137,16 @@ header h1{
 
 .email h3{
     font-size: 16px;
+    margin-top: 8px;
+    padding-left: 15px;
 }
+
+
 
 .email-body{
     padding: 5px;
     padding-left: 15px;
-    margin-top: 5px;
+    margin-top: 20px;
 
     text-align: left;
 }
@@ -214,12 +224,19 @@ section h2{
     margin-bottom: 40px
 }
 
-section .quiz-app{
+
+
+#projects > .app {
+    margin-bottom: 30px;
+}
+
+section .app{
     background-color: rgba(0, 0, 0, 0.01);
     padding: 10px;
     border: 1px solid grey;
     border-radius: 10px;
 }
+
 
 section img{
     padding: 30px; 
@@ -239,20 +256,53 @@ img.images{
 /* ---------------------- 
         TEXT 
 ----------------------*/
-.quiz-app h3{
+.app h3{
     font-size: 18px;
     font-weight: 510;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.quiz-app h3 a{
+.app h3 a{
     font-weight: bold;
+    /* words were too close together */
+    margin-left: 5px;
 }
-.quiz-app p{
+
+/* this character: "|", needed to be spaced out from this word: "Page" */
+.app h3 a:nth-child(1) {
+    margin-right: 5px;
+}
+
+.app p{
     font-size: 18px;
     font-weight: 510;
     color: black;
     line-height: 1.6;
     text-align: center;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 section ul.experience-list li{
     background-color: rgba(0, 0, 0, 0.01);
     padding: 10px;
@@ -265,18 +315,25 @@ section ul.experience-list li{
     font-weight: 510;
     color: black;
     line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.experience-list li:nth-child(3){
+    margin-bottom: 0px;
+
 }
 
 /* ---------------------- 
         LINKS 
 ----------------------*/
-.quiz-app a, [role='content-info'] a{
+.app a, .content-info a{
     color: black;
     text-decoration: inherit;
 }
 
-.quiz-app a:hover, .quiz-app a:focus, 
-[role='content-info'] a:hover, [role='content-info'] a:focus,
+.app a:hover, .app a:focus, 
+.content-info a:hover, .content-info a:focus,
 .content-drop li a:hover, .content-drop li a:focus,
 .reply:hover, .reply:focus,
 .forward:hover, .forward:focus{
@@ -287,7 +344,7 @@ section ul.experience-list li{
 /* ---------------------- 
         FOOTER 
 ----------------------*/
-[role="content-info"]{
+.content-info {
     margin-top:150px;
 
     background-color: rgba(0, 0, 0, 0.1);
@@ -312,7 +369,7 @@ section ul.experience-list li{
         margin-top: auto;
         margin-bottom: auto;
     }
-    [role="navigation"] .dropdown .content-drop{
+    .navigation .dropdown .content-drop{
         position: static;
         list-style: none;
         display: inline-flex;
@@ -344,10 +401,16 @@ section ul.experience-list li{
         margin-left: -50px;
     
     }
+
+    /* would specify "section h3" but that includes the email header */
+    #projects h3, #experience h3 {
+        font-size: 26px;
+    }
+
     section{
         margin-bottom: 200px;
     }
-    [role='content-info']{
+    .content-info {
         margin-top:-50px;
     }  
     header h1{
@@ -359,7 +422,7 @@ section ul.experience-list li{
         COMPUTER SCREEN LARGE 
 ----------------------*/
 @media screen and (min-width: 1024px) {
-    [role="navigation"] h2{
+    .navigation h2{
         margin-top: auto;
         margin-bottom: auto;
         font-size: 40px;
@@ -372,6 +435,7 @@ section ul.experience-list li{
     }
     header h1{
         margin-top: 100px;
+        font-size: 36px;
     }
     
     .email h3{
@@ -383,19 +447,24 @@ section ul.experience-list li{
     .content-drop li a{
         font-size: 24px;
     }
+
+    #projects h2, #experience h2 {
+        font-size: 30px;
+    }
+
     section{
         margin-bottom: 150px;
     }
-    .quiz-app h3{
+    .app h3{
         font-size: 22px;
     }
-    .quiz-app p{
+    .app p{
         font-size: 22px;
     }
     section ul.experience-list li{
         font-size: 22px;
     }
-    [role='content-info']{
+    .content-info{
         margin-top:200px;
     }  
     header h1{

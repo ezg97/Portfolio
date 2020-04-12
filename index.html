@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <title>HTML wireframe</title>
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="main.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRaleway&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <nav role="navigation">
-        <h2>Elijah Guerrero</h2>
+    <nav class="navigation">
+        <h2> <a href="#">Elijah Guerrero</a></h2>
         <div class="dropdown">
             <button class="btn-drop" onclick="btnDropClick()" type="button">&#9776;</button>
             <ul class="content-drop hide">
@@ -17,66 +18,83 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="https://github.com/ezg97"  target="_blank">Git</a></li>
-                <li><a href=https://www.linkedin.com/in/elijah-guerrero-fullstack-developer/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/in/elijah-guerrero-fullstack-developer/" target="_blank">LinkedIn</a></li>
             </ul>
         </div>
     </nav>
 
-    <main role="main">
+    <main class="main">
         <header>
             <h1>Fullstack Developer</h1>
         </header>
 
         <section id="bio">
             <div class='logo-border'>
-                <a href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio"><img class="logo" src="elijah.jpg" alt="Logo"/></a>
+                <a href="mailto:elijahguerrero97@gmail.com?subject=In%20regards%20to%20your%20Portfolio"><img class="logo" src="elijah.jpg" alt="Logo"/></a>
             </div>
 
             <div class='email' id='email'>
                 <h3>From: Guerrero, Elijah</h3>
                 <h3>To: Future Employers</h3>
                 <div class='email-body'>
-                    <p><span class='email-text'>Hello,<br><br>I’m a fullstack developer and outside of watching youtube and eating Chipotle, this is all you need to know about me:<br></span></p>
+                    <p><span class='email-text'>Hello,<br/><br/>I’m a fullstack developer and outside of watching youTube and eating Chipotle, this is all you need to know about me:<br/></span></p>
 
                     <ul class="email-list">
-                        <li><span class='email-text'>Programming is my <b>career</b>,<br></span></li>
-                        <li><span class='email-text'>Web development is my <b>passion</b>,<br></span></li>
-                        <li><span class='email-text'>and I enjoy making <b>ideas</b> come to life through code.<br></span></li>
+                        <li><span class='email-text'>Programming is my <b>career</b>,<br/></span></li>
+                        <li><span class='email-text'>Web development is my <b>passion</b>,<br/></span></li>
+                        <li><span class='email-text'>and I enjoy making <b>ideas</b> come to life through code.<br/></span></li>
                     </ul>
 
-                    <p><span class='email-text'>Best Regards,<br>Elijah</span></p>
+                    <p><span class='email-text'>Best Regards,<br/>Elijah</span></p>
                 </div>
             </div>
             <div class='email-buttons'>
-                <a class="reply" href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio&amp;body=Hello Elijah,">Reply</a>
-                <a class="forward" href="mailto:Enter an email?subject=Check out this portfolio&amp;body=Hello, here's the link: https://ezg97.github.io/Portfolio/.">Forward</a>
+                <a class="reply" href="mailto:elijahguerrero97@gmail.com?subject=In%20regards%20to%20your%20Portfolio&amp;body=Hello%20Elijah,">Reply</a>
+                <a class="forward" href="mailto:Enter%20an%20email?subject=Check%20out%20this%20portfolio&amp;body=Hello,%20here's%20the%20link:%20https://ezg97.github.io/Portfolio/.">Forward</a>
             </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="quiz-app">
-                <h3>Quiz App: <a href="https://ezg97.github.io/quiz-app/" target="_blank">Page</a> | <a href="https://github.com/ezg97/quiz-app" target="_blank">Git</a></h3>
-                <img class="images" src="quiz-app.png" alt="Quiz app screenshot">
-                <p>A quick quiz of unknown facts that may surprise you. </p>
-                <p>Utilized: <b>Javascript, CSS, and HTML</b>.</p>
+            <div class="app">
+                <h3>Anytime Scheduler:  <a href="https://anytime-scheduler-client.now.sh/" target="_blank">Page</a> | <a href="https://github.com/ezg97/Anytime-Scheduler-Client" target="_blank">Git</a></h3>
+                <img class="images" src="Scheduler-demo-page.png" alt="Scheduler app screenshot"/>
+                <p class='summary'>Generate weekly work schedules for your company's employees.</p>
+                <p>Languages utilized: <b>JavaScript/Node.js, HTML, and CSS</b>.</p>
+                <p>Frameworks utilized: <b>Mocha, Express, React, </b>.</p>
             </div>
+
+            <div class="app">
+                <h3>Anytime SetupMaker:  <a href="https://anytime-setupmaker.now.sh/" target="_blank">Page</a> | <a href="https://github.com/ezg97/Anytime-SetupMaker-Client" target="_blank">Git</a></h3>
+                <img class="images" src="Setup-landing-page.png" alt="SetupMaker app screenshot"/>
+                <p class='summary'>Create daily workflow setups that will assign the best employees to the best positions at all times.</p>
+                <p>Languages utilized: <b>JavaScript/Node.js, CSS, and HTML</b>.</p>
+                <p>Frameworks utilized: <b>React, Express, Mocha</b>.</p>
+            </div>
+
+            <div class="app">
+                <h3>YouTube Converter:  <a href="https://ezg97.github.io/Youtube-Converter/" target="_blank">Page</a> | <a href="https://github.com/ezg97/Youtube-Converter" target="_blank">Git</a></h3>
+                <img class="images" src="api-search.jpg" alt="YouTube Converter app screenshot"/>
+                <p class='summary'>Utilizes the YouTube API which gives users the ability to search and view videos, also provides links to download an audio and/or video file of the selected video.</p>
+                <p>Languages Utilized: <b>JavaScript, CSS, and HTML</b>.</p>
+                <p>Frameworks utilized: <b>jQuery</b>.</p>
+            </div>
+
+            
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
             <ul class="experience-list">
                 <li>Spent time programing in static, dynamic, object oriented, and even functional (Ocaml) programming languages.</li>
-                <br><br>
-                <li>Experience in C++, Python, Javascript, HTML, CSS, and I’m self taught in Java and XML.</li>
-                <br>
-                <li>Developed applications for the web and for mobile devices using Android Studio.</li>
+                <li>Experience in JavaScript/Node.js, HTML, CSS, SQL, C++, Python, and I’m self-taught in Java and XML.</li>
+                <li>Developed applications for the web utilizing frameworks such as React, Express, Mocha, and jQuery and for mobile devices using Android Studio.</li>
             </ul>
         </section>
 
     </main>
-    <footer role="content-info"><a href="mailto:elijahguerrero97@gmail.com?subject=In regards to your Portfolio">Contact me at: elijahguerrero97@gmail.com</a></footer>
+    <footer class="content-info"><a href="mailto:elijahguerrero97@gmail.com?subject=In%20regards%20to%20your%20Portfolio">Contact me at: elijahguerrero97@gmail.com</a></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
